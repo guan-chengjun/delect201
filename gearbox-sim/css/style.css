@@ -1,0 +1,169 @@
+/* 克制的工业风 UI，只保留必要控制 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  background: #20262c;
+  color: #e6eaee;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+.panel {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  width: 300px;
+  padding: 18px 20px 16px;
+  background: rgba(28, 34, 40, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  user-select: none;
+}
+
+.panel h1 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.panel h1 span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8fa0ad;
+  margin-left: 6px;
+}
+
+.readout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.readout-item {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.readout-item label {
+  display: block;
+  font-size: 11px;
+  color: #93a3b0;
+  margin-bottom: 3px;
+}
+
+.readout-item strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.readout-item em {
+  font-style: normal;
+  color: #f0a04a;
+  font-size: 18px;
+}
+
+.readout-arrow {
+  color: #8fa0ad;
+  font-size: 18px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+button {
+  flex: 1;
+  padding: 8px 0;
+  font-size: 13px;
+  font-family: inherit;
+  color: #dfe6ec;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+button.primary {
+  background: #c96a1e;
+  border-color: #e08535;
+}
+
+button.primary:hover {
+  background: #dd7a28;
+}
+
+button.is-paused {
+  background: #2f7d52;
+  border-color: #3f9a68;
+}
+
+button.is-off {
+  opacity: 0.55;
+}
+
+.slider-row {
+  display: block;
+  font-size: 12px;
+  color: #a9b7c2;
+}
+
+.slider-row span em {
+  font-style: normal;
+  color: #f0a04a;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+  accent-color: #e08535;
+  cursor: pointer;
+}
+
+.ratio {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #9fb0bd;
+  line-height: 1.5;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #72828f;
+}
+
+.model-line {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #66757f;
+  word-break: break-all;
+}

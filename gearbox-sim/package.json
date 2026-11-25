@@ -1,0 +1,21 @@
+{
+  "name": "gearbox-sim",
+  "version": "1.0.0",
+  "description": "两级圆柱齿轮减速箱交互式 3D 原理仿真（Three.js，纯运动学）",
+  "type": "module",
+  "scripts": {
+    "start": "node tools/server.mjs",
+    "build:models": "node tools/export-glb.mjs"
+  },
+  "keywords": [
+    "threejs",
+    "gearbox",
+    "simulation",
+    "kinematics"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.160.0"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>两级圆柱齿轮减速箱 · 3D 原理仿真</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- 本地化 three.js（vendor 目录），离线可运行；addons 内部裸模块 'three' 由 importmap 解析 -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- 仅保留必要控制项 -->
+  <div class="panel">
+    <h1>两级齿轮减速箱 <span>运动学仿真</span></h1>
+
+    <div class="readout">
+      <div class="readout-item">
+        <label>输入转速</label>
+        <strong><em id="rpm-in">120</em> rpm</strong>
+      </div>
+      <div class="readout-arrow">→</div>
+      <div class="readout-item">
+        <label>输出转速</label>
+        <strong><em id="rpm-out">12.0</em> rpm</strong>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="btn-play" class="primary">暂停</button>
+      <button id="btn-reset">重置</button>
+      <button id="btn-particles">动力流：开</button>
+    </div>
+
+    <label class="slider-row">
+      <span>输入转速 <em id="rpm-value">120</em> rpm</span>
+      <input id="rpm-slider" type="range" min="0" max="300" step="5" value="120" />
+    </label>
+
+    <p id="ratio-text" class="ratio"></p>
+    <p class="hint">鼠标左键旋转视角 · 滚轮缩放 · 右键平移</p>
+    <p class="model-line">模型来源：<span id="model-status">加载中…</span></p>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

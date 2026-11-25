@@ -1,0 +1,5 @@
+# 浏览器自动化测试产生的临时配置
+tools/chrome-profile/
+
+# 调试截图（保留 overview.png 与 mesh-closeup.png 作为文档）
+tools/screenshots/*.tmp
